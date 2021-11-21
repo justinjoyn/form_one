@@ -1,0 +1,184 @@
+html {
+    background-color: #EFEFEF;
+}
+
+body {
+    background-color: #EFEFEF;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-left: 30px;
+}
+
+h5 {
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+h6 {
+    font-weight: 600;
+    line-height: 1.6;
+    margin-top: 0px;
+}
+
+p {
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+#scale {
+    width: 10mm !important;
+    height: 1px !important;
+}
+
+#canvas {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    display: block;
+    margin: 0 auto 5mm;
+    box-shadow: 0 0 1mm rgba(0, 0, 0, 0.5);
+    resize: vertical;
+}
+
+#canvas-print {
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.tool-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.tool-panel ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tool-panel li {
+    margin-bottom: 10px;
+}
+
+.user-text-dialog {
+    position: fixed;
+    top: 65px;
+    left: 75px;
+    box-shadow: 0 0 1mm rgba(0, 0, 0, 0.5);
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    display: none;
+}
+
+.user-text-dialog textarea {
+    border: none;
+    border-radius: 2px;
+    display: block;
+}
+
+.village-name-dialog {
+    position: fixed;
+    top: 335px;
+    left: 75px;
+    box-shadow: 0 0 1mm rgba(0, 0, 0, 0.5);
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    padding: 10px;
+    display: none;
+}
+
+.village-name-dialog h5 {
+    margin-bottom: 10px !important;
+}
+
+.village-name-dialog input {
+    border: 1px #555555 solid;
+    border-radius: 2px;
+    display: block;
+    padding: 10px;
+}
+
+.button-outline {
+    background: #FFF;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 15px 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 1mm rgba(0, 0, 0, 0.5);
+    transition: background-color 500ms ease 0ms;
+}
+
+.button-outline img {
+    vertical-align: middle;
+    transition: all 500ms ease 0ms;
+}
+
+.button-outline:hover {
+    background-color: #555;
+}
+
+.button-outline:hover img {
+    filter: invert(100);
+}
+
+#form-one {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    display: block;
+    margin: 0 auto 5mm;
+    box-shadow: 0 0 1mm rgba(0, 0, 0, 0.5);
+    resize: vertical;
+}
+
+#form-one-print {
+    margin: 0px !important;
+    box-shadow: none !important;
+}
+
+.form-input {
+    width: 100%;
+    resize: vertical;
+    margin-left: 20px;
+}
+
+.form-text {
+    width: 100%;
+    display: none;
+    margin-left: 20px;
+}
+
+@media print {
+    body {
+        margin: 0 !important;
+        margin-left: 0px !important;
+    }
+
+    #canvas {
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #scale {
+        display: none !important;
+    }
+
+    .tool-panel {
+        display: none !important;
+    }
+
+    .user-text-dialog {
+        display: none !important;
+    }
+
+    .form-input {
+        display: none;
+    }
+
+    .form-text {
+        display: block;
+    }
+}

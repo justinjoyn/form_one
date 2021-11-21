@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="tool-panel" id="tool-panel">
+    <ul>
+        <li>
+            <button class="button-outline" id="convert-segment-button" title="Convert Segment">
+                <img src="img/outline-power_input-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="type-button" title="Text">
+                <img src="img/outline-title-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="save-floor-button" title="Save Floor">
+                <img src="img/outline-done-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="add-page-button" title="Add Page">
+                <img src="img/outline-note_add-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="delete-button" title="Delete Selected">
+                <img src="img/outline-delete-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="clear-canvas-button" title="Clear Canvas">
+                <img src="img/outline-layers_clear-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="reload-button" title="Reset" onclick="window.location.reload();">
+                <img src="img/outline-refresh-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="settings-button" title="Settings">
+                <img src="img/outline-settings-24px.svg"/>
+            </button>
+        </li>
+        <li>
+            <button class="button-outline" id="print-button" title="Save PDF">
+                <img src="img/outline-insert_drive_file-24px.svg"/>
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div class="user-text-dialog" id="user-text-dialog">
+    <textarea id="user-text-input" cols="40" rows="10"></textarea>
+</div>
+
+<div class="village-name-dialog" id="village-name-dialog">
+    <h5>Village Name</h5>
+    <input id="village-name-input">
+</div>
+
+<div id="form-one">
+    <div>
+        <div style="padding: 10px">
+            <p align="right" style="font-size: 12px;">
+                19/922/2012. 36,000 +60,000+35,000 G. P. S © Govt. of Kerala.
+            </p>
+        </div>
+        <div style="text-align:center">
+            <h5>FORM I<br> (<i>See</i> Rule 3)</h5>
+        </div>
+        <div style="margin-left: 40px; margin-right: 40px;">
+            <b>
+                <h5 style="text-align:justify">
+                    List of houses liable for assessment under the Kerala Building Tax Act, 1975 in
+                    <i><span id="village-name">______________</span></i> Village
+                    <i>Kunnamkulam</i> of Taluk in <i>Thrissur</i> District
+                </h5>
+            </b>
+        </div>
+    </div>
+    <table style="margin-left: 40px; margin-right: 40px;">
+        <tr>
+            <td width="50%" valign="top">
+                <h6>1. Name of Taluk/Panchayat/Special Grade Panchayat/Municipality/Corporation, Village, Desom, Kara or
+                    Muri, Survey and Sub-Division No. where the building is situate</h6>
+            </td>
+            <td width="50%" valign="top">
+                <textarea class="form-input" id="q1" rows="3" oninput="setText(this)"></textarea>
+                <p class="form-text" id="q1-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>2. Whether it is a new construction, addition or extension to an existing Building or major repairs
+                    or
+                    improvements</h6>
+            </td>
+            <td width="50%" valign="top">
+                <input class="form-input" type="text" id="q2" oninput="setText(this)">
+                <p class="form-text" id="q2-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>3. Nature of building:</h6>
+                <h6>&emsp;&emsp;&emsp;&emsp;(i) Residential; or</h6>
+                <h6>&emsp;&emsp;&emsp;&emsp;(ii) Other buildings </h6>
+            </td>
+            <td width="50%" valign="top">
+                <input class="form-input" type="text" id="q3" oninput="setText(this)">
+                <p class="form-text" id="q3-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>4. Plinth area of the Building</h6>
+            </td>
+            <td width="50%" valign="top">
+                <input class="form-input" type="text" id="q4" oninput="setText(this)">
+                <p class="form-text" id="q4-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>5. Date of completion</h6>
+            </td>
+            <td width="50%" valign="top">
+                <input class="form-input" type="text" id="q5" oninput="setText(this)">
+                <p class="form-text" id="q5-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>6. Date of occupation</h6>
+            </td>
+            <td width="50%" valign="top">
+                <input class="form-input" type="text" id="q6" oninput="setText(this)">
+                <p class="form-text" id="q6-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>7. Name and address of the owner of the building</h6>
+            </td>
+            <td width="50%" valign="top">
+                <textarea class="form-input" id="q7" oninput="setText(this); copyAddress(this)" rows="6"></textarea>
+                <p class="form-text" id="q7-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>8. Name and address of the owner or occupant and his right for occupation</h6>
+            </td>
+            <td width="50%" valign="top">
+                <textarea class="form-input" id="q8" oninput="setText(this)" rows="6"></textarea>
+                <p class="form-text" id="q8-text"></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" valign="top">
+                <h6>9. Whether extract of the building application register attached and if not why?</h6>
+            </td>
+            <td width="50%" valign="top">
+                <textarea class="form-input" id="q9" oninput="setText(this)"
+                          rows="3"></textarea>
+                <p class="form-text" id="q9-text"></p>
+            </td>
+        </tr>
+    </table>
+    <div style="padding: 40px">
+        <p align="right">
+            <i>Village Officer</i>
+        </p>
+    </div>
+
+</div>
+
+<div id="scale"></div>
+<canvas id="canvas" data-paper-resize="true" data-paper-hidpi="on" oncontextmenu="return false;"></canvas>
+
+<script type="application/javascript" src="js/tippy.all.min.js"></script>
+<script type="application/javascript" src="js/common.js"></script>
+<script type="application/javascript" src="js/paper-full.min.js"></script>
+<script type="text/paperscript" src="js/draw.js" canvas="canvas"></script>
+
+</body>
+</html>
