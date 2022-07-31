@@ -155,6 +155,10 @@ var villageNameInput = document.getElementById('village-name-input');
 villageNameInput.addEventListener("input", function (e) {
     document.getElementById('village-name').innerText = villageNameInput.value;
 }, false);
+var talukNameInput = document.getElementById('taluk-name-input');
+talukNameInput.addEventListener("input", function (e) {
+    document.getElementById('taluk-name').innerText = talukNameInput.value;
+}, false);
 
 //Print button
 var printButton = document.getElementById('print-button');
