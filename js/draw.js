@@ -159,6 +159,10 @@ var talukNameInput = document.getElementById('taluk-name-input');
 talukNameInput.addEventListener("input", function (e) {
     document.getElementById('taluk-name').innerText = talukNameInput.value;
 }, false);
+var districtNameInput = document.getElementById('district-name-input');
+districtNameInput.addEventListener("input", function (e) {
+    document.getElementById('taluk-name').innerText = districtNameInput.value;
+}, false);
 
 //Print button
 var printButton = document.getElementById('print-button');
