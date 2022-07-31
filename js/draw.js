@@ -161,7 +161,7 @@ talukNameInput.addEventListener("input", function (e) {
 }, false);
 var districtNameInput = document.getElementById('district-name-input');
 districtNameInput.addEventListener("input", function (e) {
-    document.getElementById('taluk-name').innerText = districtNameInput.value;
+    document.getElementById('district-name').innerText = districtNameInput.value;
 }, false);
 
 //Print button
